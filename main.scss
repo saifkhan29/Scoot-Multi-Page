@@ -1,0 +1,51 @@
+// Fonts
+@font-face {
+    font-family: 'Space Mono';
+    src: url('./assets/fonts/SpaceMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('./assets/fonts/SpaceMono-Regular.ttf') format('truetype');
+    font-weight: regular;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('./assets/fonts/LexendDeca-VariableFont_wght.ttf') format('truetype');
+    font-style: normal;
+}
+
+// Custom
+@import "css/variables";
+
+
+// Components
+@import "css/components/button";
+@import "css/components/typography";
+// @import "components/form";
+// @import "components/accordion";
+
+// Layouts
+@import "css/layouts/navbar";
+@import "css/layouts/section";
+@import "css/layouts/footer";
+// @import "layouts/sidebar";
+// @import "layouts/column";
+
+// Sections
+@import "css/sections/hero";
+
+
+// // Pages
+// @import "pages/index";
+
+
+// // Custom
+@import "css/custom.scss";
+
+
+

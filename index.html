@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Scoot</title>
+</head>
+<body>
+  <div id="navbar"></div>
+
+
+  <!-- start of hero section -->
+    <section class="hero">
+      <div class="section">
+        <h1>Scooter sharing <br class="d-none d-md-block"> made simple</h1>
+
+        <div class="hero-content">
+          <p>Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient locations in each of our cities. Use our app to locate the nearest bike, unlock it with a tap, and you’re away!</p>
+
+          <button class="btn">Get Scootin</button>
+        </div>
+      </div>
+    </section>
+  <!-- end of hero section -->
+
+
+  <div id="footer"></div>
+
+  <script>
+    // Fetch the navbar HTML
+    fetch('view/components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            // Find the placeholder div and insert the fetched HTML
+            document.getElementById('navbar').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading the navbar:', error);
+        });
+
+        // Fetch the footer HTML
+      fetch('view/components/footer.html')
+          .then(response => response.text())
+          .then(data => {
+              // Find the placeholder div and insert the fetched HTML
+              document.getElementById('footer').innerHTML = data;
+          })
+          .catch(error => {
+              console.error('Error loading the footer:', error);
+          });
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+.btn {
+	--btn-color: #{$white};
+	--btn-background: #{$yellow};
+
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	font-family: $font-family-heading;
+	font-stretch: 125%;
+	font-weight: 500;
+	color: var(--btn-color);
+	background-color: var(--btn-background);
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+	border: 1px solid var(--btn-background);
+	padding: 1.4rem 4rem;
+	font-weight: bold;
+	transition: all 0.3s ease;
+	
+	// Media Queries
+	@media (min-width: $md) {
+		font-size: 1.5rem;
+	}
+
+	&:hover,
+	&:focus-visible {
+		--btn-background: #{$white};
+		--btn-color: #{$yellow};
+		border: 1px solid var(--btn-color);
+	}
+	
+	&:hover,
+	&:focus {
+		outline: 0;
+		text-decoration: none;
+	}
+
+	&.disabled,
+	&:disabled {
+		opacity: 0.65;
+		pointer-events: none;
+	}
+}
+
