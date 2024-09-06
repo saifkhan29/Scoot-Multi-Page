@@ -1,0 +1,51 @@
+.features {
+    padding-top: 16rem;
+    padding-bottom: 20rem;
+
+    &-cards-container {
+        display: grid;
+        grid-template-columns:1 1fr;
+        gap: 3rem;
+
+        // Media Queries
+        @media (min-width: $md) {
+            grid-template-columns: repeat(3, 1fr);            
+        }
+    }
+
+    &-card {
+
+        &:nth-last-child(1) {
+
+            .img {
+                position: relative;
+                width: fit-content;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 1.5rem;
+                    width: 100vw;
+                    background-color: $light-grey;
+                    top: 50%;
+                    right: 50%;
+                    transform: translateY(-50%);
+                    z-index: -1;
+                }
+            }
+        }
+
+        .img {
+            margin-bottom: 4rem;
+        }
+
+        h4 {
+            margin-bottom: 2.7rem;
+            color: $dark-navy;
+        }
+
+        p {
+            color: $dim-grey;
+        }
+    }
+}
