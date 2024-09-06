@@ -14,82 +14,136 @@
   <div id="navbar"></div>
 
 
-  <!-- start of hero section -->
-    <section class="hero">
-      <div class="section">
-        <h1>Scooter sharing <br class="d-none d-md-block"> made simple</h1>
-
-        <div class="hero-content">
-          <p>Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient locations in each of our cities. Use our app to locate the nearest bike, unlock it with a tap, and you’re away!</p>
-
-          <button class="btn">Get Scootin</button>
-        </div>
-      </div>
-    </section>
-  <!-- end of hero section -->
-
-  <!-- start of features section -->
-   <section class="features">
+<!-- start of hero section -->
+  <section class="hero">
     <div class="section">
-      <div class="features-cards-container">
-        <aside class="features-card">
-          <div class="img">
-            <img src="./assets/icons/locate.svg" alt="Locate">
-          </div>
+      <h1>Scooter sharing <br class="d-none d-md-block"> made simple</h1>
 
-          <h4>Locate with app</h4>
+      <div class="hero-content">
+        <p>Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient locations in each of our cities. Use our app to locate the nearest bike, unlock it with a tap, and you’re away!</p>
 
-          <p>Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away. </p>
-        </aside>
-
-        <aside class="features-card">
-          <div class="img">
-            <img src="./assets/icons/scooter.svg" alt="Scooter">
-          </div>
-
-          <h4>Pick your scooter</h4>
-
-          <p>We show the most important info for the scooters closest to you. So you know how much charge they have left and can see roughly how much it will cost.</p>
-        </aside>
-
-        <aside class="features-card">
-          <div class="img">
-            <img src="./assets/icons/ride.svg" alt="Ride">
-          </div>
-
-          <h4>Enjoy the ride</h4>
-
-          <p>Scan the QR code and the bike will unlock. Retract the cable lock, put on a helmet, and you’re off! Always lock bikes away from walkways and accessibility ramps.</p>
-        </aside>
+        <button class="btn">Get Scootin</button>
       </div>
     </div>
-   </section>
-  <!-- end of features section -->
+  </section>
+<!-- end of hero section -->
 
-  <div id="footer"></div>
+<!-- start of features section -->
+  <section class="features">
+  <div class="section">
+    <div class="features-cards-container">
+      <aside class="features-card">
+        <div class="img">
+          <img src="./assets/icons/locate.svg" alt="Locate">
+        </div>
 
-  <script>
-    // Fetch the navbar HTML
-    fetch('view/components/navbar.html')
+        <h4>Locate with app</h4>
+
+        <p>Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away. </p>
+      </aside>
+
+      <aside class="features-card">
+        <div class="img">
+          <img src="./assets/icons/scooter.svg" alt="Scooter">
+        </div>
+
+        <h4>Pick your scooter</h4>
+
+        <p>We show the most important info for the scooters closest to you. So you know how much charge they have left and can see roughly how much it will cost.</p>
+      </aside>
+
+      <aside class="features-card">
+        <div class="img">
+          <img src="./assets/icons/ride.svg" alt="Ride">
+        </div>
+
+        <h4>Enjoy the ride</h4>
+
+        <p>Scan the QR code and the bike will unlock. Retract the cable lock, put on a helmet, and you’re off! Always lock bikes away from walkways and accessibility ramps.</p>
+      </aside>
+    </div>
+  </div>
+  </section>
+<!-- end of features section -->
+
+<!-- start of image content section -->
+<section class="image-content">
+  <div class="section">
+    <div class="content">
+      <h2>Easy to use <br class="d-none d-md-block"> riding telemetry</h2>
+
+      <p>The Scoot app is available with riding telemetry. This means it can show you your average speed, how long you've been using the scooter, your traveling distance, and many more things all in an easy to use app.</p>
+
+      <button class="btn">Learn More</button>
+    </div>
+
+    <div class="image">
+      <img src="./assets/images/telemetry.jpg" alt="">
+    </div>
+  </div>
+</section>
+<!-- end of image content section -->
+
+<!-- start of image content section -->
+<section class="image-content image-content-right">
+  <div class="section">
+    <div class="content">
+      <h2>Easy to use <br class="d-none d-md-block"> riding telemetry</h2>
+
+      <p>The Scoot app is available with riding telemetry. This means it can show you your average speed, how long you've been using the scooter, your traveling distance, and many more things all in an easy to use app.</p>
+
+      <button class="btn">Learn More</button>
+    </div>
+
+    <div class="image">
+      <img src="./assets/images/telemetry.jpg" alt="">
+    </div>
+  </div>
+</section>
+<!-- end of image content section -->
+
+<!-- start of image content section -->
+<section class="image-content">
+  <div class="section">
+    <div class="content">
+      <h2>Easy to use <br class="d-none d-md-block"> riding telemetry</h2>
+
+      <p>The Scoot app is available with riding telemetry. This means it can show you your average speed, how long you've been using the scooter, your traveling distance, and many more things all in an easy to use app.</p>
+
+      <button class="btn">Learn More</button>
+    </div>
+
+    <div class="image">
+      <img src="./assets/images/telemetry.jpg" alt="">
+    </div>
+  </div>
+</section>
+<!-- end of image content section -->
+
+<div id="footer"></div>
+
+<script>
+  // Fetch the navbar HTML
+  fetch('view/components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+          // Find the placeholder div and insert the fetched HTML
+          document.getElementById('navbar').innerHTML = data;
+      })
+      .catch(error => {
+          console.error('Error loading the navbar:', error);
+      });
+
+      // Fetch the footer HTML
+    fetch('view/components/footer.html')
         .then(response => response.text())
         .then(data => {
             // Find the placeholder div and insert the fetched HTML
-            document.getElementById('navbar').innerHTML = data;
+            document.getElementById('footer').innerHTML = data;
         })
         .catch(error => {
-            console.error('Error loading the navbar:', error);
+            console.error('Error loading the footer:', error);
         });
-
-        // Fetch the footer HTML
-      fetch('view/components/footer.html')
-          .then(response => response.text())
-          .then(data => {
-              // Find the placeholder div and insert the fetched HTML
-              document.getElementById('footer').innerHTML = data;
-          })
-          .catch(error => {
-              console.error('Error loading the footer:', error);
-          });
-  </script>
+</script>
 </body>
 </html>
