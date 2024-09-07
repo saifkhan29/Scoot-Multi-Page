@@ -65,54 +65,67 @@ h4, .h4 {
 }
 
 h1, .h1 {
-  font-size: 11.2rem;
-  letter-spacing: -2.5;
+  font-size: 8rem;
+  letter-spacing: -0.358rem;
+  line-height: 8rem;
 }
 @media (min-width: 768px) {
   h1, .h1 {
     font-size: 5.6rem;
+    letter-spacing: -0.25rem;
+    line-height: 5.6rem;
   }
 }
 
 h2, .h2 {
-  font-size: 6.4rem;
-  letter-spacing: 0.286rem;
-  line-height: 6.4rem;
+  font-size: 9.6rem;
+  letter-spacing: -0.428rem;
+  line-height: 9.6rem;
 }
 @media (min-width: 768px) {
   h2, .h2 {
-    letter-spacing: -2.14;
     font-size: 4.8rem;
+    line-height: 4.8rem;
+    letter-spacing: -0.214rem;
   }
 }
 
 h3, .h3 {
-  font-size: 2rem;
-  letter-spacing: -1.79;
+  font-size: 8rem;
+  letter-spacing: -0.358rem;
+  line-height: 8rem;
 }
 @media (min-width: 768px) {
   h3, .h3 {
     font-size: 4rem;
+    line-height: 4.8rem;
+    letter-spacing: -0.179rem;
   }
 }
 
 h4, .h4 {
-  font-size: 4.8rem;
-  letter-spacing: -1.07;
+  font-size: 4rem;
+  letter-spacing: -0.178;
+  line-height: 5.6rem;
 }
 @media (min-width: 768px) {
   h4, .h4 {
     font-size: 2.4rem;
+    line-height: 2.8rem;
+    letter-spacing: -0.107rem;
   }
 }
 
 p {
-  font-size: 3rem;
   font-family: "Space Mono", sans-serif;
+  font-size: 3rem;
+  line-height: 5rem;
+  letter-spacing: 0;
 }
 @media (min-width: 768px) {
   p {
     font-size: 1.5rem;
+    line-height: 2.5rem;
   }
 }
 
