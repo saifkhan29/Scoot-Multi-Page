@@ -58,10 +58,23 @@ h4, .h4 {
 }
 
 p {
-    font-family: $font-family-heading;
+    font-family: $font-family;
     font-size: 3rem;
     line-height: 5rem;
     letter-spacing: 0;
+    font-weight: 300;
+
+    // Media Queries
+    @media (min-width: $md) {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+}
+
+a {
+    font-size: 3rem;
+    letter-spacing: 0;
+    line-height: 5rem;
 
     // Media Queries
     @media (min-width: $md) {

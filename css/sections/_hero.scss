@@ -1,28 +1,53 @@
 .hero {
     padding: 15.3rem 0;
-    background-image: url('../../assets/images/home-hero-desktop.jpg');
+    background-image: url('../../assets/images/home-hero-mobile.jpg');
     background-size: 100% 100%;
     overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+
+    // Media Queries
+    @media (min-width: $sm) {
+        background-image: url('../../assets/images/home-hero-tablet.jpg');
+    }
+
+    @media (min-width: $md) {
+        background-image: url('../../assets/images/home-hero-desktop.jpg');
+    }
 
     &-content {
         position: relative;
-        margin-left: 9.5rem;
+        text-align: center;
+
+        // Media Queries
+        @media (min-width: $md) {
+            text-align: start;
+            margin-left: 9.5rem;            
+        }
 
         &::after {
             content: url('../../assets/patterns/white-circles.svg');
             position: absolute;
             right: -27%;
             top: 57%;
+            display: none;
 
             // Media Queries
             @media (min-width: $xxxl) {
-                right: -43.5%;                
+                right: -43.5%;   
+                display: block;             
             }
         }
     }
 
     h1, p {
         color: $white;
+        text-align: center;
+
+        // Media Queries
+        @media (min-width: $md) {
+            text-align: start;
+        }
     }
 
     p {
@@ -52,6 +77,45 @@
             right: calc(-80% - 5.7rem);
             top: 32%;
             width: 44.7rem;
+        }
+    }
+
+    &--banner {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+        margin-bottom: 14.4rem;
+        position: relative;
+        
+        // Media Queries
+        @media (min-width: $md) {
+            padding-top: 7.2rem;
+            padding-bottom: 7.2rem;
+            margin-bottom: 12rem;
+        }
+
+        &::after {
+            content: url('../../assets/patterns/white-circles.svg');
+            position: absolute;
+            right: -2%;
+            top: 50%;
+            height: 6.2rem;
+            width: auto;
+            display: none;
+            transform: translateY(-50%);
+
+            // Media Queries
+            @media (min-width: $md) {
+                display: block;             
+            }
+        }
+    }
+
+    &-about {
+        background-image: url('../../assets/images/about-hero-mobile.jpg');
+
+        // Media Queries
+        @media (min-width: $sm) {
+            background-image: url('../../assets/images/about-hero-desktop.jpg');
         }
     }
 }

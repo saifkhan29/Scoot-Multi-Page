@@ -20,17 +20,32 @@
 
         aside {
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             align-items: center;
             padding: 10.2rem 0;
             position: relative;
             z-index: 2;
+
+            // Media Queries
+            @media (min-width: $md) {
+                flex-direction: row;
+            }
         }
 
         h2 {
             flex: 1;
             color: $white;
             z-index: 2;
+
+            // Media Queries
+            @media (max-width: $md) {
+                font-size: 6.4rem;
+                line-height: 6.4rem;
+                letter-spacing: -0.286rem;
+                text-align: center;
+                margin-bottom: 8rem;
+            }
 
             br {
 
@@ -56,35 +71,71 @@
         background-color: #333A44;
 
         .logo {
-            margin-right: 5.85rem;
+            margin-right: 0;
+            width: 21.564rem;
+            height: auto;
+
+            // Media Queries
+            @media (min-width: $md) {
+                margin-right: 5.85rem;  
+                width: 10.782rem;
+            }
         }
 
         aside {
             display: flex;
-            padding: 3.5rem 0;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 12.8rem;
+            padding-bottom: 17.6rem;
+            
+            // Media Queries
+            @media (min-width: $md) {
+                padding: 3.5rem 0;
+                flex-direction: row;
+            }
         }
 
         &-items {
             flex: 1;
 
+            // Media Queries
+            @media (max-width: $md) {                
+                margin-top: 8.28rem;
+                margin-bottom: 17rem; 
+            }
+
             ul {
                 display: flex;
                 height: 100%;
                 align-items: center;
+
+                // Media Queries
+                @media (max-width: $md) {
+                    flex-direction: column;
+                }
             }
 
             li {
                 list-style-type: none;
 
                 &:not(:last-child) {
-                    margin-right: 3.2rem;
+                    margin-bottom: 3.2rem;
+                }
+
+                // Media Queries
+                @media (min-width: $md) {
+                    
+                    &:not(:last-child) {
+                        margin-right: 3.2rem;
+                        margin-bottom: 0;
+                    }
                 }
             }
 
             a {
                 text-decoration: none;
                 color: $dim-grey;
-                font-size: 1.5rem;
                 font-family: $font-family;
             }
         }
@@ -94,12 +145,23 @@
             align-items: center;
 
             a {
-                height: 2.4rem;
-                width: 2.4rem;
+                height: 4.8rem;
+                width: 4.8rem;
                 display: block;
+
+                // Media Queries
+                @media (min-width: $md) {
+                    height: 2.4rem;
+                    width: 2.4rem;
+                }
                 
                 &:not(:last-child) {
-                    margin-right: 2.4rem;
+                    margin-right: 4.8rem;
+
+                    // Media Queries
+                    @media (min-width: $md) {
+                        margin-right: 2.4rem;
+                    }
                 }
             }
 

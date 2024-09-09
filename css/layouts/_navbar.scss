@@ -2,6 +2,9 @@
     background-color: $white;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 
+    // NOTE: when working on navbar remove this overflow x hidden
+    overflow-x: hidden;
+
     nav {
         display: flex;
         align-items: center;

@@ -1,5 +1,10 @@
 .image-content {
-    margin-bottom: 16rem;
+    margin-bottom: 24rem;
+
+    // Media Queries
+    @media (min-width: $md) {
+        margin-bottom: 16rem;
+    }
 
     .section {
         display: flex;
@@ -27,6 +32,12 @@
             margin-bottom: 6.4rem;
             
             // Media Queries
+            @media (max-width: $md) {
+                font-size: 6.4rem;
+                letter-spacing: -0.286rem;
+                line-height: 6.4rem;
+            }
+
             @media (min-width: $md) {
                 margin-bottom: 2.4rem;
                 text-wrap: nowrap;                
@@ -45,12 +56,12 @@
     }
 
     .image {
-        width: 44.5rem;
         margin-bottom: 11.2rem;
 
         // Media Queries 
-        @media (min-width: $md) {
-            
+        @media (min-width: $sm) {
+            width: 44.5rem;   
+            margin-bottom: 0;         
         }
 
         img {
