@@ -1,9 +1,12 @@
 .faq {
 
+    h2, h3, h4, p {
+        color: $dark-navy;
+    }
+
     h2 {
         text-align: center;
         margin-bottom:  12.8rem;
-        color: $dark-navy;
 
         // Media Queries
         @media (min-width: $md) {
@@ -11,11 +14,21 @@
         }
     }
 
+    h3 {
+
+        // Media Queries
+        @media (max-width: $md) {
+            margin-bottom: 6.4rem; 
+        }
+    }
+
     &-block {
         display: grid;
+        margin-bottom: 9.6rem;
 
         // Media Queries
         @media (min-width: $md) {
+            margin-bottom: 6.4rem;
             grid-template-columns: repeat(3, 1fr);
         }
     }
@@ -25,6 +38,75 @@
         // Media Queries
         @media (min-width: $md) {
             grid-column: 2 / 4;
+        }
+    }
+
+    &-item {
+        position: relative;
+        overflow: hidden;
+
+        &:not(:last-child) {
+            margin-bottom: 3.2rem;
+
+            // Media Queries
+            @media (min-width: $md) {
+                margin-bottom: 1.6rem;
+            }
+        }
+
+        h4 {
+            padding: 6.4rem;
+            background-color: $snow;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.5s ease;
+
+            // Media Queries
+            @media (min-width: $md) {
+                padding: 3.2rem 4rem;
+            }
+
+            &::after {
+                content: url('./assets/icons/chevron.svg');
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 6.4rem;
+
+                // Media Queries
+                @media (min-width: $md) {
+                    right: 4rem;
+                }
+
+            }
+        }
+
+        p {
+            position: absolute;
+            z-index: -1;
+            background-color: $snow;
+            transform: translateY(-100%);
+            padding: 0rem 6.4rem 6.4rem 6.4rem;
+            transition: all 0.5s ease;
+
+            // Media Queries
+            @media (min-width: $md) {
+                padding: 0rem 4rem 3.2rem 4rem;
+            }
+        }
+
+        &.active {
+            h4 {
+
+                &::after {
+                    transform: translateY(-50%) rotate(180deg);
+                }
+            }
+
+            p {
+                position: relative;
+                transform: translateY(0%);
+            }
         }
     }
 }

@@ -660,21 +660,30 @@ a {
   color: #939CAA;
 }
 
+.faq h2, .faq h3, .faq h4, .faq p {
+  color: #495567;
+}
 .faq h2 {
   text-align: center;
   margin-bottom: 12.8rem;
-  color: #495567;
 }
 @media (min-width: 768px) {
   .faq h2 {
     margin-bottom: 10.3rem;
   }
 }
+@media (max-width: 768px) {
+  .faq h3 {
+    margin-bottom: 6.4rem;
+  }
+}
 .faq-block {
   display: grid;
+  margin-bottom: 9.6rem;
 }
 @media (min-width: 768px) {
   .faq-block {
+    margin-bottom: 6.4rem;
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -682,6 +691,62 @@ a {
   .faq-container {
     grid-column: 2/4;
   }
+}
+.faq-item {
+  position: relative;
+  overflow: hidden;
+}
+.faq-item:not(:last-child) {
+  margin-bottom: 3.2rem;
+}
+@media (min-width: 768px) {
+  .faq-item:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+}
+.faq-item h4 {
+  padding: 6.4rem;
+  background-color: #F2F5F9;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s ease;
+}
+@media (min-width: 768px) {
+  .faq-item h4 {
+    padding: 3.2rem 4rem;
+  }
+}
+.faq-item h4::after {
+  content: url("./assets/icons/chevron.svg");
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 6.4rem;
+}
+@media (min-width: 768px) {
+  .faq-item h4::after {
+    right: 4rem;
+  }
+}
+.faq-item p {
+  position: absolute;
+  z-index: -1;
+  background-color: #F2F5F9;
+  transform: translateY(-100%);
+  padding: 0rem 6.4rem 6.4rem 6.4rem;
+  transition: all 0.5s ease;
+}
+@media (min-width: 768px) {
+  .faq-item p {
+    padding: 0rem 4rem 3.2rem 4rem;
+  }
+}
+.faq-item.active h4::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.faq-item.active p {
+  position: relative;
+  transform: translateY(0%);
 }
 
 html {

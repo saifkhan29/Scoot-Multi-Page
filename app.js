@@ -20,5 +20,14 @@ fetch('components/footer.html')
         console.error('Error loading the footer:', error);
     });
 
+// FAQ section
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach((item) => {
+    item.addEventListener('click', () => {
+    item.classList.toggle('active');
+  });
+});
+
 
     
