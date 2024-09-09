@@ -60,9 +60,15 @@
         img {
             height: 5.6rem;
             z-index: 2;
+        }
+
+        a {
 
             &:nth-of-type(1) {
-                margin-right: 1.8rem;
+
+                img {
+                    margin-right: 1.8rem;
+                }
             }
         }
     }
