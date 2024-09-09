@@ -118,4 +118,13 @@
             background-image: url('../../assets/images/about-hero-desktop.jpg');
         }
     }
+
+    &-careers {
+        background-image: url('../../assets/images/careers-location-hero-mobile.jpg');
+
+        // Media Queries
+        @media (min-width: $sm) {
+            background-image: url('../../assets/images/careers-locations-hero-desktop.jpg');
+        }
+    }
 }
