@@ -1,0 +1,62 @@
+.job {
+    margin-bottom: 24rem;
+    // Media Queries
+    @media (min-width: $md) {
+        margin-bottom: 16rem;
+    }
+
+    &-card {
+        background-color: $snow;
+        padding: 6.4rem;
+        text-align: center;
+
+        // Media Queries
+        @media (min-width: $sm) {
+            text-align: start;
+            padding: 3.2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 3.2rem;
+
+            // Media Queries
+            @media (min-width: $sm) {
+                margin-bottom: 2.4rem;
+            }
+        }
+
+        h4, p {
+            color: $dark-navy;
+        }
+
+        h4 {
+            margin-bottom: 0.8rem;
+
+            // Media Queries
+            @media (min-width: $sm) {
+                margin-bottom: 0.8rem;
+            }
+        }
+
+        p {
+
+            // Media Queries
+            @media (max-width: $md) {
+                margin-bottom: 3.2rem;
+            }
+        }
+
+        button {
+            width: 100%;
+
+            // Media Queries
+            @media (min-width: $sm) {
+                width: fit-content;
+                padding-left: 6.75rem;
+                padding-right: 6.75rem;
+            }
+        }
+    }
+}
