@@ -1,18 +1,90 @@
 #navbar {
     background-color: $white;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    position: relative;
 
     // NOTE: when working on navbar remove this overflow x hidden
-    overflow-x: hidden;
+    // overflow-x: hidden;
 
     nav {
         display: flex;
         align-items: center;
         padding: 2.2rem 0;
+
+        // Media Queries
+        @media (max-width: $md) {
+            justify-content: center;  
+            padding: 4.4rem 0;
+        }
+    }
+
+    aside {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: $md) {
+            position: absolute;
+            overflow: visible;
+            top: 100%;
+            left: -100%;
+            flex-direction: column;
+            background-color: #333A44;
+            width: 70vw;
+            height: calc(100vh - 12.4rem);
+            z-index: 100;
+            display: flex;
+            align-items: start;
+            padding: 12.8rem 6.4rem 4.8rem 6.4rem;
+            transition: all 0.5s ease;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 2rem;
+            top: 0;
+            right: calc(-30vw + 15px);
+            background-color: #000;
+            opacity: 0;
+            height: 2rem;
+            width: calc(30vw - 15px);
+            height: calc(100vh - 12.4rem);          
+            overflow-x: hidden;  
+            transition: opacity 0.5s ease, width 0.1s ease, height 0.5s ease;
+
+            // Media Queries
+            @media (min-width: $md) {
+                display: none;
+            }
+        }
+
+        button {
+
+            // Media Queries
+            @media (max-width: $md) {
+                width: 100%; 
+                padding-top: 2.8rem;
+                padding-bottom: 2.8rem;
+            }
+        }
     }
 
     .logo {
         margin-right: 5.8rem;
+
+        // Media Queries
+        @media (max-width: $md) {
+            margin-right: 0;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            height: 4rem;
+        }
     }
     
     .nav-items {
@@ -20,11 +92,24 @@
 
         ul {
             display: flex;
+
+            // Media Queries
+            @media (max-width: $md) {
+                flex-direction: column; 
+            }
         }
 
         li {
             list-style-type: none;
             margin-right: 3.2rem;
+
+            &:not(:last-child) {
+
+                // Media Queries
+                @media (max-width: $md) {
+                    margin-bottom: 4.8rem;
+                }
+            }
         }
 
         a {
@@ -32,6 +117,66 @@
             color: $dim-grey;
             font-size: 1.5rem;
             font-family: $font-family-heading;
+
+            // Media Queries
+            @media (max-width: $md) {
+                color: $light-grey;
+                font-size: 3.6rem;
+            }
+
+            &:hover {
+                transition: all 0.2s ease;
+                color: $yellow;
+            }
         }
     }  
+
+    .nav-buttons {
+
+        // Media Queries
+        @media (min-width: $md) {
+            display: none;
+        }
+
+        .open, .close {
+            cursor: pointer;
+            transition: all 0.4s ease;
+
+            // Media Queries
+            @media (max-width: $md) {
+                width: 4rem;
+            }
+        }
+
+        .close {
+            display: none;
+        }
+    }
+
+    &.active {
+
+        nav {
+        
+        
+            .nav-buttons {
+    
+                .open {
+                    display: none;
+                }
+        
+                .close {
+                    display: block;
+                }
+            }
+        }
+    
+        aside {
+            left: 0;
+
+            &::after {
+                opacity: 0.9;
+                width: calc(30vw - 15px);
+            }            
+        }
+    }
 }

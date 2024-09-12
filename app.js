@@ -4,6 +4,20 @@ fetch('components/navbar.html')
     .then(data => {
         // Find the placeholder div and insert the fetched HTML
         document.getElementById('navbar').innerHTML = data;
+
+        const openNav = document.querySelector('.open')
+        const closeNav = document.querySelector('.close')
+        const navbar = document.querySelector('#navbar')
+
+        openNav.addEventListener('click', () => {
+            navbar.classList.add('active')
+            document.body.style.overflowY = 'hidden';
+        })
+
+        closeNav.addEventListener('click', () => {
+            navbar.classList.remove('active')
+            document.body.style.overflowY = 'auto';
+        })
     })
     .catch(error => {
         console.error('Error loading the navbar:', error);
@@ -28,6 +42,5 @@ faqItems.forEach((item) => {
     item.classList.toggle('active');
   });
 });
-
 
     

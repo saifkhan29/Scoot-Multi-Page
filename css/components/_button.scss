@@ -29,7 +29,7 @@
 
 	&:hover,
 	&:focus-visible {
-		--btn-background: #{$white};
+		--btn-background: #{transparent};
 		--btn-color: #{$yellow};
 		border: 1px solid var(--btn-color);
 	}

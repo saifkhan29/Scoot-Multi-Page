@@ -1,13 +1,37 @@
 <nav class="section">
-    <img src="../../assets/logo.svg" alt="" class="logo">
-
-    <div class="nav-items">
-        <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/location">Location</a></li>
-            <li><a href="/careers">Careers</a></li>
-        </ul>
+    <div class="nav-buttons">
+        <div class="open">
+            <img src="../../assets/icons/hamburger.svg" alt="">
+        </div>
+        <div class="close">
+            <img src="../../assets/icons/close.svg" alt="">
+        </div>
     </div>
 
-    <button class="btn">Get Scootin</button>
+    <div class="logo">
+        <img src="../../assets/logo.svg" alt="">
+    </div>
+
+    <aside>
+        <div class="nav-items">
+            <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/location">Location</a></li>
+                <li><a href="/careers">Careers</a></li>
+            </ul>
+        </div>
+    
+        <button class="btn">Get Scootin</button>
+    </aside>
 </nav>
+
+<script>
+    const openNav = document.querySelector('.open')
+    const closeNav = document.querySelector('.close')
+
+    console.dir(openNav)
+
+openNav.addEventListener('click', () => {
+    console.log('hello')
+})
+</script>
