@@ -1,0 +1,111 @@
+.arrow-right-1 {
+    position: absolute;
+    top: 40%;
+    left: 110%;
+}
+
+.yellow-line-1 {
+    position: absolute;
+    background-color: $yellow;
+    height: 1.5rem;
+    width: 100vw;
+    right: 110%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow-right-image-1 {
+    position: absolute;
+    bottom: 2%;
+    right: 0;
+    width: 95%;
+    bottom: 50%;
+    height: auto;
+
+    // Media Queries
+    @media (min-width: $sm) {
+        width: 50%;
+        bottom: 60%;
+    }
+    
+    @media (min-width: $md) {
+        width: 50%;
+        bottom: 2%;
+    }
+    
+    @media (min-width: $xxl) {
+        width: auto;   
+    }
+}
+
+.arrow-right-image-2 {
+    position: absolute;
+    right: -40%;
+    width: 95%;
+    top: 0%;
+    height: auto;
+
+    // Media Queries
+    @media (min-width: $sm) {
+        width: 50%;
+        top: 10%;
+    }
+    
+    @media (min-width: $md) {
+        width: 50%;
+        top: 10%;
+        right: -12%;
+    }
+    
+    @media (min-width: $xxl) {
+        width: auto;   
+    }
+}
+
+.arrow-right-image-1 {
+    position: absolute;
+    bottom: 4%;
+    right: 0;
+    width: 95%;
+    bottom: 50%;
+    height: auto;
+
+    // Media Queries
+    @media (min-width: $sm) {
+        width: 50%;
+        bottom: 60%;
+    }
+    
+    @media (min-width: $md) {
+        width: 50%;
+        bottom: 4%;
+    }
+    
+    @media (min-width: $xxl) {
+        width: auto;   
+    }
+}
+
+.arrow-left-image-1 {
+    position: absolute;
+    left: -50%;
+    width: 95%;
+    top: 10%;
+    height: auto;
+
+    // Media Queries
+    @media (min-width: $sm) {
+        width: 50%;
+        left: -10%;
+    }
+
+    @media (min-width: $md) {
+        width: 50%;
+        top: 2%;
+        left: 0;
+    }
+    
+    @media (min-width: $xxl) {
+        width: auto;   
+    }
+}

@@ -34,6 +34,10 @@ html,body {
 	display: block;
 }
 
+.d-inline-block {
+	display: inline-block;
+}
+
 .d-none {
 	display: none;
 }
@@ -46,10 +50,26 @@ html,body {
 	}
 }
 
+.p-relative {
+	position: relative;
+}
+
 .row-reverse {
 	flex-direction: row-reverse;
 }
 
+.w-fit-content {
+	width: fit-content;
+}
+
 svg {
 	display: block;
+}
+
+p-relative {
+	position: relative;
+}
+
+section {
+	overflow-x: hidden;
 }
