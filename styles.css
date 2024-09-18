@@ -1254,4 +1254,38 @@ a {
   }
 }
 
+.circle-right {
+  position: absolute;
+  top: 50%;
+  right: -35rem;
+  transform: translateY(-50%);
+  background-color: #E5ECF4;
+  width: 44.5rem;
+  height: 44.5rem;
+  border-radius: 50%;
+  z-index: -1;
+}
+@media (max-width: 768px) {
+  .circle-right {
+    display: none;
+  }
+}
+
+.circle-left {
+  position: absolute;
+  top: 50%;
+  left: -35rem;
+  transform: translateY(-50%);
+  background-color: #E5ECF4;
+  width: 44.5rem;
+  height: 44.5rem;
+  border-radius: 50%;
+  z-index: -1;
+}
+@media (max-width: 768px) {
+  .circle-left {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
