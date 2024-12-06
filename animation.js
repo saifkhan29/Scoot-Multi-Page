@@ -14,10 +14,10 @@ const tl2 = gsap.timeline({
 const tl3 = gsap.timeline({
     scrollTrigger: {
         trigger: '.home-image-content-1',     // Element that triggers the animation
-        start: '10% 20%',                // Start the animation when the top of the element hits the center of the viewport
+        start: '-30% 20%',                // Start the animation when the top of the element hits the center of the viewport
         scrub: false,                      // Optional: Remove smooth scrubbing if not needed
         once: true,                        // Animation happens only once
-        markers: false                    // For debugging, remove in production
+        markers: false                  // For debugging, remove in production
     }
 });
 
@@ -212,49 +212,31 @@ tl3.fromTo('.arrowPath', {
     strokeDashoffset: 0,     // Animate to 0 to reveal the path
     duration: 2,             // Duration of the animation
     opacity: 1,
-    scrollTrigger: {
-        trigger: '.arrow-right-image-1',
-        start: 'top center',   // Start the animation when the top of the element hits the center of the viewport
-        markers: false,         // Display markers for debugging
-        scrub: false,            // Smooth scroll-based animation
-        once: true
-    }
 });
 
-tl3.fromTo('.arrowHead-1', {
-    strokeDasharray: '56',  // Set a large value to make the path hidden initially
-    strokeDashoffset: '-28', // Initially, the path is hidden (offset equals its total length)
-    opacity: 0
-}, {
-    strokeDashoffset: 0,     // Animate to 0 to reveal the path
-    duration: 0.5,             // Duration of the animation
-    opacity: 1,
-    delay: 1,
-    scrollTrigger: {
-        trigger: '.arrow-right-image-1',
-        start: 'top center',   // Start the animation when the top of the element hits the center of the viewport
-        markers: false,         // Display markers for debugging
-        scrub: false,            // Smooth scroll-based animation
-        once: true
-    }
-});
+tl3.add([
+    gsap.fromTo('.arrowHead-1', {
+        strokeDasharray: '56',  // Set a large value to make the path hidden initially
+        strokeDashoffset: '-28', // Initially, the path is hidden (offset equals its total length)
+        opacity: 0
+    }, {
+        strokeDashoffset: 0,     // Animate to 0 to reveal the path
+        duration: 0.5,             // Duration of the animation
+        opacity: 1,
+        delay: 1,
+    }),
+    
+    gsap.fromTo('.arrowHead-2', {
+        strokeDasharray: '61',  // Set a large value to make the path hidden initially
+        strokeDashoffset: '30.5', // Initially, the path is hidden (offset equals its total length)
+        opacity: 0
+    }, {
+        strokeDashoffset: 0,     // Animate to 0 to reveal the path
+        duration: 0.5,             // Duration of the animation
+        opacity: 1,
+        delay: 1,
+    })
+], '+3')
 
-tl3.fromTo('.arrowHead-2', {
-    strokeDasharray: '61',  // Set a large value to make the path hidden initially
-    strokeDashoffset: '30.5', // Initially, the path is hidden (offset equals its total length)
-    opacity: 0
-}, {
-    strokeDashoffset: 0,     // Animate to 0 to reveal the path
-    duration: 0.5,             // Duration of the animation
-    opacity: 1,
-    delay: 1,
-    scrollTrigger: {
-        trigger: '.arrow-right-image-1',
-        start: 'top center',   // Start the animation when the top of the element hits the center of the viewport
-        markers: false,         // Display markers for debugging
-        scrub: false,            // Smooth scroll-based animation
-        once: true
-    }
-});
 
 // End of Home Image Content 1
