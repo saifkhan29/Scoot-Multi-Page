@@ -17,7 +17,7 @@ const tl3 = gsap.timeline({
         start: '10% 20%',                // Start the animation when the top of the element hits the center of the viewport
         scrub: false,                      // Optional: Remove smooth scrubbing if not needed
         once: true,                        // Animation happens only once
-        markers: true                      // For debugging, remove in production
+        markers: false                    // For debugging, remove in production
     }
 });
 
