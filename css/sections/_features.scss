@@ -30,28 +30,30 @@
         }
 
         &:nth-last-child(1) {
+            position: relative;
 
             .img {
+                z-index: 100;
 
                 // Media Queries
                 @media (min-width: $md) {
                     position: relative;
                     width: fit-content;
                 }
+            }
 
-                &::after {
-                    content: '';
-                    position: absolute;
-                    height: 1.5rem;
-                    width: 100vw;
-                    background-color: $light-grey;
-                    top: 50%;
-                    right: 50%;
-                    transform: translateY(-50%);
-                    z-index: -1;
-                }
+            .features-card-line {
+                position: absolute;
+                height: 1.5rem;
+                width: 100vw;
+                background-color: $light-grey;
+                top: 17%;
+                right: 97%;
+                transform: translateY(-50%);
+                z-index: -10;
             }
         }
+
 
         .img {
             margin-bottom: 4.8rem;

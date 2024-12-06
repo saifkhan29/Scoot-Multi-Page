@@ -11,6 +11,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>
+
+
+  
   
   <title>Frontend Mentor | Scoot</title>
 </head>
@@ -21,24 +24,37 @@
 <!-- start of hero section -->
   <section class="hero">
     <div class="section">
-      <h1>Scooter sharing <br class="d-none d-md-block"> made simple</h1>
+      <h1 class="hero-main-text">Scooter sharing <br class="d-none d-md-block"> made simple</h1>
 
       <div class="hero-content">
         
         <div class="p-relative w-fit-content">
-          <div class="yellow-line-1"></div>
+          <div class="yellow-line-1 hero-yellow-line-1"></div>
 
-          <p>
-            Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient locations in each of our cities. Use our app to locate the nearest bike, unlock it with a tap, and you’re away!
+          <p class="hero-para-anim">
+            <span>Scoot takes the hassle out of urban mobility. Our bikes are placed in</span>
+            <span>convenient locations in each of our cities. Use our app to locate the nearest</span>
+            <span>bike, unlock it with a tap, and you’re away!</span>
           </p>
 
           <div class="arrow-right-1">
-            <svg xmlns="http://www.w3.org/2000/svg" width="452" height="151"><g fill="none" fill-rule="evenodd" stroke="#FCB72B" stroke-linejoin="bevel" stroke-width="15"><path d="M407.952 145.444l38.426-38.426-38.426-38.426"/><path d="M0 8h270.115v99.369h176.263"/></g></svg>
+            <svg width="452" height="151" viewBox="0 0 452 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_108_28)">
+              <path class="hero-yellow-line-2-arrow-2" d="M408 145L447 106" stroke="#FCB72B" stroke-width="15" stroke-linejoin="bevel"/>
+              <path class="hero-yellow-line-2-arrow-1" d="M451 112L408 69" stroke="#FCB72B" stroke-width="15" stroke-linejoin="bevel"/>
+              <path class="hero-yellow-line-2-main" d="M0 8H270.115V107.369H446.378" stroke="#FCB72B" stroke-width="15" stroke-linejoin="bevel"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_108_28">
+              <rect width="452" height="151" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>              
           </div>
         </div>
 
 
-        <button class="btn">Get Scootin</button>
+        <button class="btn hero-btn">Get Scootin</button>
       </div>
     </div>
   </section>
@@ -46,46 +62,68 @@
 
 <!-- start of features section -->
   <section class="features">
-  <div class="section">
-    <div class="features-cards-container">
-      <aside class="features-card">
-        <div class="img">
-          <img src="./assets/icons/locate.svg" alt="Locate">
-        </div>
+    <div class="section">
+      <div class="features-cards-container">
+        <aside class="features-card">
+          <div class="img">
+            <img src="./assets/icons/locate.svg" alt="Locate">
+          </div>
 
-        <h4>Locate with app</h4>
+          <div class="features-card-content">
+            <h4>Locate with app</h4>
 
-        <p>Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away. </p>
-      </aside>
+            <p>Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away. </p>
+          </div>
+        </aside>
 
-      <aside class="features-card">
-        <div class="img">
-          <img src="./assets/icons/scooter.svg" alt="Scooter">
-        </div>
+        <aside class="features-card">
+          <div class="img">
+            <img src="./assets/icons/scooter.svg" alt="Scooter">
+          </div>
 
-        <h4>Pick your scooter</h4>
+          <div class="features-card-content">
+            <h4>Pick your scooter</h4>
 
-        <p>We show the most important info for the scooters closest to you. So you know how much charge they have left and can see roughly how much it will cost.</p>
-      </aside>
+            <p>We show the most important info for the scooters closest to you. So you know how much charge they have left and can see roughly how much it will cost.</p>
+          </div>
+        </aside>
 
-      <aside class="features-card">
-        <div class="img">
-          <img src="./assets/icons/ride.svg" alt="Ride">
-        </div>
+        <aside class="features-card">
+          <div class="features-card-line"></div>
 
-        <h4>Enjoy the ride</h4>
+          <div class="img">
+            <img src="./assets/icons/ride.svg" alt="Ride">
+          </div>
 
-        <p>Scan the QR code and the bike will unlock. Retract the cable lock, put on a helmet, and you’re off! Always lock bikes away from walkways and accessibility ramps.</p>
-      </aside>
+          <div class="features-card-content">
+            <h4>Enjoy the ride</h4>
+
+            <p>Scan the QR code and the bike will unlock. Retract the cable lock, put on a helmet, and you’re off! Always lock bikes away from walkways and accessibility ramps.</p>
+          </div>
+        </aside>
+      </div>
     </div>
-  </div>
   </section>
 <!-- end of features section -->
 
 <!-- start of image content section -->
-<section class="image-content p-relative">
+<section class="image-content p-relative home-image-content-1">
   <div class="arrow-right-image-1">
-    <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="741" height="151"><g fill="none" fill-rule="evenodd" stroke="#FCB72B" stroke-linejoin="bevel" stroke-width="15"><path id="arrowPath" d="M740.969 8H182.854v99.369H6.591"/><path d="M44.64 145.64L6.214 107.214 44.64 68.787"/></g></svg>
+    <!-- <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="741" height="151"><g fill="none" fill-rule="evenodd" stroke="#FCB72B" stroke-linejoin="bevel" stroke-width="15"><path class="arrowPath" d="M740.969 8H182.854v99.369H6.591"/><path class="arrowHead-1" d="M44.64 145.64L6.214 107.214 44.64 68.787"/></g></svg> -->
+
+    <svg class="arrow" width="741" height="151" viewBox="0 0 741 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_108_6)">
+      <path class="arrowHead-1" d="M44.64 145.64L4.49987 105.5" stroke="#FCB72B" stroke-width="15" stroke-linejoin="bevel"/>
+      <path class="arrowPath" d="M740.969 8H182.854V107.369H6.591" stroke="#FCB72B" stroke-width="15" stroke-linejoin="bevel"/>
+      <path class="arrowHead-2" d="M1 112L45 69" stroke="#FCB72B" stroke-width="15" stroke-linejoin="bevel"/>
+      </g>
+      <defs>
+      <clipPath id="clip0_108_6">
+      <rect width="741" height="151" fill="white"/>
+      </clipPath>
+      </defs>
+      </svg>
+      
   </div>
 
   <div class="circle-right"></div>
@@ -109,7 +147,7 @@
 <!-- start of image content section -->
 <section class="image-content image-content-right p-relative">
   <div class="arrow-left-image-1">
-    <svg xmlns="http://www.w3.org/2000/svg" width="452" height="151"><g fill="none" fill-rule="evenodd" stroke="#FCB72B" stroke-linejoin="bevel" stroke-width="15"><path d="M407.952 145.444l38.426-38.426-38.426-38.426"/><path d="M0 8h270.115v99.369h176.263"/></g></svg>
+    <svg class="arrow2" xmlns="http://www.w3.org/2000/svg" width="452" height="151"><g fill="none" fill-rule="evenodd" stroke="#FCB72B" stroke-linejoin="bevel" stroke-width="15"><path class="arrowPath2" d="M407.952 145.444l38.426-38.426-38.426-38.426"/><path d="M0 8h270.115v99.369h176.263"/></g></svg>
   </div>
 
   <div class="circle-left"></div>
@@ -133,7 +171,7 @@
 <!-- start of image content section -->
 <section class="image-content p-relative">
   <div class="arrow-right-image-2">
-    <svg xmlns="http://www.w3.org/2000/svg" width="741" height="151"><g fill="none" fill-rule="evenodd" stroke="#FCB72B" stroke-linejoin="bevel" stroke-width="15"><path d="M740.969 8H182.854v99.369H6.591"/><path d="M44.64 145.64L6.214 107.214 44.64 68.787"/></g></svg>
+    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="741" height="151"><g fill="none" fill-rule="evenodd" stroke="#FCB72B" stroke-linejoin="bevel" stroke-width="15"><path class="arrowPath" d="M740.969 8H182.854v99.369H6.591"/><path d="M44.64 145.64L6.214 107.214 44.64 68.787"/></g></svg>
   </div>
 
   <div class="circle-right"></div>

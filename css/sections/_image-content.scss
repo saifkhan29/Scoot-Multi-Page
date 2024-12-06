@@ -1,5 +1,7 @@
 .image-content {
     margin-bottom: 24rem;
+    overflow: auto;
+    overflow-x: hidden;
 
     // Media Queries
     @media (min-width: $md) {
@@ -57,6 +59,8 @@
 
     .image {
         margin-bottom: 11.2rem;
+        z-index: -1;
+        overflow: hidden;
 
         // Media Queries 
         @media (min-width: $sm) {
